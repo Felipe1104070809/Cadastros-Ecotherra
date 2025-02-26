@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Ecotherra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+            background-image: url('https://source.unsplash.com/1600x900/?construction,truck,machinery');
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 { color: #2c3e50; }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #27ae60;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+            document.getElementById("form-container").innerHTML = "<h2>Obrigado pelo cadastro! Nossa equipe já vai entrar em contato com você.</h2>";
+        }
+    </script>
+</head>
+<body>
+    <div class="container" id="form-container">
+        <h1>Ecotherra</h1>
+        <p>Locação de Máquinas e Caminhões</p>
+        <p>Entre em contato para mais informações:</p>
+        <p><strong>WhatsApp:</strong> +55 11 93266-9312</p>
+        
+        <h2>Cadastre-se para saber mais</h2>
+        <form onsubmit="showMessage(event)">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <input type="tel" name="phone" placeholder="Seu Número de Telefone" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
